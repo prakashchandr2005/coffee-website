@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Website HTML CSS | Coding PrakashWith</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200">
+    <link rel="stylesheet" href="coffee1.css">
+</head>
+
+<body>
+
+<header id="header">
+    <nav class="navebar">
+
+        <a href="#" class="logo">Coffee<span>.</span></a>
+
+        <ul class="menu-link">
+
+            <span id="close-menu-btn" class="material-symbols-outlined">
+                close
+            </span>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+        </ul>
+
+        <span id="menu-btn" class="material-symbols-outlined">
+            menu
+        </span>
+
+    </nav>
+</header>
+
+<section class="hero-section">
+    <div class="content">
+
+        <h1>Start Your Day With Fresh Coffee</h1>
+
+        <p>
+            Coffee is a popular and beloved beverage enjoyed by
+            people around the world. Awaken your senses with a steaming cup of liquid motivation.
+        </p>
+
+        <button>Order Now</button>
+
+    </div>
+</section>
+
+<script>
+
+const header = document.getElementById("header");
+const menuBtn = document.getElementById("menu-btn");
+const closeMenuBtn = document.getElementById("close-menu-btn");
+
+menuBtn.addEventListener("click", () => {
+    header.classList.toggle("show-mobial-menu");
+});
+
+closeMenuBtn.addEventListener("click", () => {
+    menuBtn.click();
+});
+
+
+</script>
+
+</body>
+</html>

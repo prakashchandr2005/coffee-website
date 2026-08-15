@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(coffee1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+}
+
+header .navebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* Logo */
+.navebar .logo {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navebar .logo span {
+    color: #c06b3e;
+}
+
+/* Menu */
+.navebar .menu-link {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navebar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navebar a:hover {
+    color: #c06b3e;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content {
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-section .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.hero-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+/* Button */
+.hero-section .content button {
+    background: #fff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+    background: #c06b3e;
+    color: #fff;
+}
+
+/* Menu & Close Icons */
+#close-menu-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#menu-btn {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+
+header{
+    padding: 10px 20px;
+}
+
+ header.show-mobial-menu::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter:blur(5px);
+ }
+    #close-menu-btn,
+    #menu-btn {
+        display: block;
+    }
+
+    .navebar .menu-link {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        width: 260px;
+        height: 100vh;
+        background: #fff;
+        padding: 70px 40px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        transition: left 0.15s ease;
+    }
+
+    /* Open mobile menu */
+    header.show-mobial-menu .navebar .menu-link {
+        left: 0;
+    }
+
+    .navebar a {
+        color: #000;
+    }
+.hero-section .content{
+    text-align: center;
+}
+.hero-section .content:is(h1, p){
+    max-width: 100%;
+}
+
+.hero-section .content h1{
+    font-size: 2.3rem;
+    line-height: 60px;
+
+}
+.hero-section .content button{
+    padding: 9px 18px;
+}
+}
+
